@@ -30,18 +30,18 @@ function routeByHosts(host) {
   return "";
 }
 
-import HTML from './docker.html'
-
 async function handleRequest(request) {
   const url = new URL(request.url);
   const upstream = routeByHosts(url.hostname);
-  if (url.pathname == "/") {
-    return new Response(HTML.replace(/{{host}}/g, originalHost), {
-      status: 200,
-      headers: {
-        "content-type": "text/html"
+  if (upstream === "") {
+    return new Response(
+      JSON.stringify({
+        routes: routes,
+      }),
+      {
+        status: 404,
       }
-    });
+    );
   }
   const isDockerHub = upstream == dockerHub;
   const authorization = request.headers.get("Authorization");
