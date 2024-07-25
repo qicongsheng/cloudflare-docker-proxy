@@ -35,7 +35,7 @@ import HTML from './docker.html'
 async function handleRequest(request) {
   const url = new URL(request.url);
   const upstream = routeByHosts(url.hostname);
-  if (upstream === "") {
+  if (url.pathname == "/") {
     return new Response(HTML.replace(/{{host}}/g, originalHost), {
       status: 200,
       headers: {
