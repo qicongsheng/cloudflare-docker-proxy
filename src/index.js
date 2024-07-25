@@ -17,7 +17,7 @@ const routes = {
   "ecr.nevy.eu.org": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.libcuda.so": dockerHub,
+  "docker-staging.nevy.eu.org": dockerHub,
 };
 
 function routeByHosts(host) {
