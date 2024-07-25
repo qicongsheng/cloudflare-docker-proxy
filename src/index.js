@@ -30,13 +30,13 @@ function routeByHosts(host) {
   return "";
 }
 
-import DOCS from './docker.html'
+import HTML from './docker.html'
 
 async function handleRequest(request) {
   const url = new URL(request.url);
   const upstream = routeByHosts(url.hostname);
   if (upstream === "") {
-    return new Response(DOCS, {
+    return new Response(HTML.replace(/{{host}}/g, originalHost), {
       status: 200,
       headers: {
         "content-type": "text/html"
