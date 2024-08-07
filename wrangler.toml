@@ -19,8 +19,7 @@ routes = [
   { pattern = "k8s-gcr.nevy.eu.org", custom_domain = true },
   { pattern = "k8s.nevy.eu.org", custom_domain = true },
   { pattern = "ghcr.nevy.eu.org", custom_domain = true },
-  { pattern = "cloudsmith.nevy.eu.org", custom_domain = true },
-  { pattern = "frps.nevy.eu.org", custom_domain = true }
+  { pattern = "cloudsmith.nevy.eu.org", custom_domain = true }
 ]
 
 [env.production.vars]
