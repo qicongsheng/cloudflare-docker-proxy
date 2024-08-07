@@ -15,7 +15,6 @@ const routes = {
   "ghcr.nevy.eu.org": "https://ghcr.io",
   "cloudsmith.nevy.eu.org": "https://docker.cloudsmith.io",
   "ecr.nevy.eu.org": "https://public.ecr.aws",
-  "frps.nevy.eu.org": "http://42.192.22.70:9000",
 
   // staging
   "docker-staging.nevy.eu.org": dockerHub,
